@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grill House - Burgers & Fast-Food</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS pour le Fast-Food */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Fond sombre pour le côté premium */
+            color: #f8f8f8;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', sans-serif; /* Titres percutants */
+            color: #ffaa00; /* Jaune/Or pour l'accent */
+            letter-spacing: 2px;
+        }
+        
+        /* 1. ENTÊTE & MENU */
+        .header-fastfood {
+            background-color: #3e3e3e; 
+            color: #fff;
+            padding: 40px 0;
+            border-bottom: 5px solid #d40000; /* Rouge vif pour l'énergie */
+        }
+        .header-fastfood h1 {
+            color: #fff;
+            margin: 0 0 10px 0;
+            font-size: 4em;
+        }
+        .header-fastfood p {
+            font-size: 1.5em;
+        }
+        
+        /* Menu de navigation (Sommaire) */
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 700;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffaa00;
+        }
+
+        /* Boutons d'action */
+        .btn-action {
+            display: inline-block;
+            background: #d40000; /* Rouge */
+            color: #fff;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 30px 10px;
+            font-weight: 700;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+        }
+        .btn-action:hover {
+            background: #ffaa00;
+            color: #1a1a1a;
+            transform: scale(1.05);
+        }
+
+        /* 2. MENU PRINCIPAL (Grille) */
+        #menu {
+            padding: 60px 0;
+        }
+        .menu-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .menu-category {
+            background: #2b2b2b; /* Boîtes gris foncé */
+            padding: 30px 20px;
+            border-radius: 10px;
+            width: calc(33% - 60px);
+            min-width: 300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            text-align: left;
+        }
+        .menu-category h3 {
+            border-bottom: 3px solid #d40000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #ffaa00;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #555;
+            font-size: 1.1em;
+        }
+        .menu-price {
+            color: #d40000;
+            font-weight: 700;
+        }
+        
+        /* 3. PROMOTIONS */
+        #promos {
+            padding: 60px 0;
+            background-color: #d40000; /* Section en Rouge Vif */
+            color: #fff;
+        }
+        
+        /* 4. CONTACT */
+        #contact-fastfood {
+            padding: 60px 0;
+            background: #121212;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #000;
+            color: #aaa;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #ffaa00;
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .menu-category {
+                width: 90%;
+            }
+            .header-fastfood h1 {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-fastfood">
+        <div class="container">
+            <h1>THE GRILL HOUSE</h1>
+            <p>Vos Burgers, livrés chauds et rapidement.</p>
+            
+            <nav>
+                <a href="#menu">LE MENU</a>
+                <a href="#promos">PROMOS</a>
+                <a href="#contact-fastfood">CONTACT</a>
+            </nav>
+            
+            <a href="#" class="btn-action">COMMANDEZ EN LIGNE (Simulation)</a>
+            <a href="#" class="btn-action" style="background: #ffaa00; color: #1a1a1a;">TÉLÉCHARGER LE MENU (PDF Fictif)</a>
+        </div>
+    </header>
+
+    <section id="menu" class="container">
+        <h2>NOTRE CARTE GOURMANDE</h2>
+        
+        <div class="menu-grid">
+            
+            <div class="menu-category">
+                <h3>BURGERS SIGNATURES</h3>
+                <div class="menu-item">
+                    <span>Le Classique Bacon</span>
+                    <span class="menu-price">12.50 €</span>
+                </div>
+                <div class="menu-item">
+                    <span>Le Végétarien Gourmand</span>
+                    <span class="menu-price">11.90 €</span>
+                </div>
+                <div class="menu-item">
+                    <span>Double Cheese Ultra</span>
+                    <span class="menu-price">15.00 €</span>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h3>ACCOMPAGNEMENTS</h3>
+                <div class="menu-item">
+                    <span>Frites Maison (Grandes)</span>
+                    <span class="menu-price">4.50 €</span>
+                </div>
+                <div class="menu-item">
+                    <span>Onion Rings</span>
+                    <span class="menu-price">5.00 €</span>
+                </div>
+                <div class="menu-item">
+                    <span>Salade Caesar</span>
+                    <span class="menu-price">6.50 €</span>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h3>DESSERTS & BOISSONS</h3>
+                <div class="menu-item">
+                    <span>Milkshake Vanille</span>
+                    <span class="menu-price">5.50 €</span>
+                </div>
+                <div class="menu-item">
+                    <span>Cookie Géant</span>
+                    <span class="menu-price">3.90 €</span>
+                </div>
+                <div class="menu-item">
+                    <span>Sodas (Coca, Fanta)</span>
+                    <span class="menu-price">3.00 €</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="promos" class="container">
+        <h2>PROMOTIONS DE LA SEMAINE</h2>
+        <p style="font-size: 1.2em; font-weight: bold;">Menu Étudiant : Burger Classique + Frites + Boisson = 12.00 €</p>
+        <p>Valable uniquement sur présentation de la carte étudiante. Venez vite en profiter !</p>
+    </section>
+
+    <section id="contact-fastfood" class="container">
+        <h2>CONTACT & ACCÈS</h2>
+        <p>12 Rue de la Friture, 75010 Paris (Numéro fictif)</p>
+        <p>Ouvert tous les jours de 11h30 à 23h00.</p>
+        <p>Téléphone pour commandes : 01 XX XX XX XX</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>The Grill House &copy; 2025. Un site démo créé par <a href="index.html" style="color: #ffaa00;">Enzo D.</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
