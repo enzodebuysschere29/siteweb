@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzo D. | Création de Sites Web Freelance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* CSS GLOBAL */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Blanc cassé moderne */
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #191970; /* Bleu marine élégant */
+        }
+
+        /* 1. ENTÊTE / HERO SECTION */
+        header {
+            background: linear-gradient(135deg, #191970 0%, #4682b4 100%);
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            border-bottom: 5px solid #ffaa00;
+            opacity: 0; 
+            animation: fadeIn 1s ease-out 0.2s forwards;
+        }
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: inline-block;
+            background: #ffaa00;
+            color: #191970;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 15px;
+            font-weight: 700;
+            transition: all 0.3s ease-in-out; 
+            border: 2px solid #ffaa00;
+        }
+        .btn:hover {
+            background: #191970;
+            color: #ffaa00;
+            transform: translateY(-3px);
+            border: 2px solid #ffaa00;
+        }
+
+        /* 2. À PROPOS */
+        #about {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+        }
+        #about h2 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .skill-box {
+            display: inline-block;
+            margin: 15px 10px;
+            padding: 12px 25px;
+            background: #e9ecef;
+            border-radius: 5px;
+            font-weight: 700;
+            color: #191970;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .skill-box:hover {
+            background: #d1d9e0;
+            transform: scale(1.05);
+        }
+
+        /* 3. PORTFOLIO */
+        #portfolio {
+            padding: 60px 0;
+            background: #f4f4f9;
+            text-align: center;
+        }
+        #portfolio h2 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .portfolio-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; 
+        }
+        .portfolio-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 40px); 
+            min-width: 300px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .portfolio-item h3 {
+            color: #4682b4;
+        }
+
+        /* 4. CONTACT */
+        #contact {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+        }
+        .contact-info {
+            padding: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        .contact-info p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .contact-info strong {
+            color: #191970;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #191970;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+
+        /* RESPONSIVE DESIGN AVANCÉ */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%; 
+            }
+            header {
+                padding: 60px 0;
+            }
+            header h1 {
+                font-size: 2.2em; 
+            }
+            .portfolio-item {
+                width: 100%; 
+                min-width: unset;
+            }
+        }
+        
+        /* KEYFRAME pour l'animation d'entrée */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Création de Sites Web Simples et Efficaces</h1>
+            <p>Votre partenaire digital pour une présence en ligne professionnelle et sans stress.</p>
+            <a href="#contact" class="btn">Démarrer votre projet</a>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <h2>À Propos de Moi</h2>
+        <p>Je suis un développeur passionné par la création de solutions web claires, rapides et adaptées aux besoins réels des PME et des indépendants. Mon objectif est de vous offrir une vitrine en ligne professionnelle sans les coûts et les complexités inutiles.</p>
+        <div class="skill-box">HTML & CSS Propre</div>
+        <div class="skill-box">UX/UI Minimaliste</div>
+        <div class="skill-box">Optimisation Mobile (Responsive)</div>
+        <div class="skill-box">E-commerce de base</div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Mon Travail</h2>
+            <p>Découvrez mes réalisations pensées spécifiquement pour les **petites entreprises, artisans et commerçants** qui ont besoin d'une vitrine efficace et professionnelle.</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>Commerce de Proximité</h3>
+                    <p>Site vitrine idéal pour **Boucherie, Fleuriste, Barbier, Épicerie** ou **Boulangerie**. Présentation produits, horaires et contact.</p>
+                    <a href="demo-boulangerie.html" class="btn" style="background: #191970; color: #fff; border: 2px solid #191970; margin-top: 10px;">Voir le Projet Démo</a>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>Services & Bien-être</h3>
+                    <p>Pour **Coach Sportif, Salon de Coiffure ou Esthétique**. Mise en avant des services et simulation de prise de rendez-vous.</p>
+                    <a href="demo-esthetique.html" class="btn" style="background: #191970; color: #fff; border: 2px solid #191970; margin-top: 10px;">Voir le Projet Démo</a>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>Fast-Food & Restauration</h3>
+                    <p>Interface optimisée pour **Menus en ligne, Commandes à emporter/livraison** et promotions du jour (Fictif).</p>
+                    <a href="#" class="btn" style="background: #191970; color: #fff; border: 2px solid #191970; margin-top: 10px;">En Construction</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Prêt à commencer ?</h2>
+            <div class="contact-info">
+                <p>Contactez-moi directement pour discuter de votre projet et obtenir un devis rapide. Je travaille avec des clients partout en France.</p>
+                
+                <p style="font-size: 1.4em; font-weight: 700; margin-bottom: 5px;">
+                    <strong style="color: #ffaa00;">Email :</strong> <a href="mailto:enzodebuysschere29@gmail.com" style="color: #191970; text-decoration: underline;">enzodebuysschere29@gmail.com</a>
+                </p>
+                <p style="font-size: 1.4em; font-weight: 700;">
+                    <strong style="color: #ffaa00;">Téléphone :</strong> 07.80.35.26.84
+                </p>
+                <p style="font-size: 1.1em; margin-top: 20px;">
+                    <strong>Zone de Travail :</strong> Toute la France (Services 100% à distance)
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>Développé par Enzo D. &copy; 2025 | Spécialiste des solutions web simplifiées pour PME.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

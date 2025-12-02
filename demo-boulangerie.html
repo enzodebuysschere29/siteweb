@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Bon Pain - Boulangerie Artisanale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS pour le style de la boulangerie */
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f3e8;
+            color: #5d4037;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Défilement doux */
+        }
+        .header-boulangerie {
+            background-color: #a87b5a;
+            color: #fff;
+            padding: 50px 0 20px 0;
+            text-align: center;
+            border-bottom: 5px solid #d4ac00;
+        }
+        .header-boulangerie h1 {
+            margin: 0;
+            font-size: 3.5em;
+            font-family: 'Playfair Display', serif;
+        }
+        .header-boulangerie p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        /* Menu/Sommaire */
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d4ac00;
+        }
+        
+        .section-content {
+            width: 80%;
+            margin: auto;
+            padding: 40px 0;
+            text-align: center;
+        }
+        /* Style des produits et tarifs */
+        .produit-item, .tarif-item {
+            display: inline-block;
+            width: calc(30% - 30px);
+            margin: 15px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .produit-item:hover {
+            transform: translateY(-5px);
+        }
+        /* Style des images ajustées */
+        .produit-item img {
+            width: 100%; /* L'image prend toute la largeur de son conteneur */
+            height: 200px; /* Hauteur fixe pour que toutes les images soient uniformes */
+            object-fit: cover; /* Recadre l'image pour qu'elle remplisse l'espace sans la déformer */
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+        .produit-item img:hover {
+            transform: scale(1.05); /* Zoom léger au survol (effet dynamique) */
+        }
+        
+        /* Style du tableau des Tarifs */
+        .tarif-table {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+        .tarif-table th, .tarif-table td {
+            border: 1px solid #d4ac00;
+            padding: 12px;
+            text-align: left;
+        }
+        .tarif-table th {
+            background-color: #a87b5a;
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+        }
+        .tarif-table tr:nth-child(even) {
+            background-color: #f0ebe0;
+        }
+        
+        footer {
+            background: #5d4037;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #d4ac00;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* RESPONSIVE DESIGN AVANCÉ */
+        @media (max-width: 768px) {
+            .section-content {
+                width: 95%;
+            }
+            .produit-item, .tarif-item {
+                width: 90%;
+                margin: 15px auto;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-boulangerie">
+        <h1>Le Bon Pain</h1>
+        <p>Tradition, qualité, passion</p>
+        
+        <nav>
+            <a href="#savoir-faire">SAVOIR-FAIRE</a>
+            <a href="#produits">PRODUITS PHARE</a>
+            <a href="#tarifs">NOS TARIFS</a>
+        </nav>
+    </header>
+
+    <section id="savoir-faire" class="section-content">
+        <h2 id="savoir-faire-titre">Notre Savoir-Faire Artisanale</h2>
+        <p>Depuis 1985, nous pétrissons le savoir-faire de nos aînés pour vous offrir un pain authentique et des viennoiseries faites maison. Venez découvrir le goût de la tradition !</p>
+    </section>
+
+    <section id="produits" class="section-content" style="background-color: #eee;">
+        <h2 id="produits-titre">Nos Produits Phares</h2>
+        
+        <div class="produit-item">
+            <img src="baguette.jpg" alt="Photo d'une Baguette Tradition croustillante">
+            <h3>La Baguette Tradition</h3>
+            <p>Cuite sur pierre, croustillante à souhait, le goût de l'authenticité.</p>
+        </div>
+        
+        <div class="produit-item">
+            <img src="croissant.jpeg" alt="Photo d'un Croissant Pur Beurre">
+            <h3>Le Croissant Pur Beurre</h3>
+            <p>Feuilletage doré et fondant en bouche, idéal pour le petit-déjeuner.</p>
+        </div>
+        
+        <div class="produit-item">
+            <img src="gateau.jpg" alt="Photo d'une Pâtisserie du Jour">
+            <h3>Pâtisserie du Jour</h3>
+            <p>Notre création exclusive, un délice renouvelé chaque semaine.</p>
+        </div>
+    </section>
+
+    <section id="tarifs" class="section-content">
+        <h2 id="tarifs-titre">Nos Tarifs</h2>
+        <p>Découvrez notre grille tarifaire pour vos plaisirs quotidiens (prix indicatifs).</p>
+        
+        <table class="tarif-table">
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Prix à l'unité</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Baguette Tradition</td>
+                    <td>1.20 €</td>
+                    <td>Le classique de notre fournil, pétrissage lent.</td>
+                </tr>
+                <tr>
+                    <td>Croissant Pur Beurre</td>
+                    <td>1.30 €</td>
+                    <td>Fait maison, beurre AOP.</td>
+                </tr>
+                <tr>
+                    <td>Pain de Campagne (500g)</td>
+                    <td>3.50 €</td>
+                    <td>Farine locale, levain naturel.</td>
+                </tr>
+                <tr>
+                    <td>Pâtisserie du Jour</td>
+                    <td>4.50 €</td>
+                    <td>Tarif variable selon la création de la semaine.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </section>
+
+    <footer>
+        <p>Le Bon Pain &copy; 2025 | 12 Rue des Artisans, 75000 Paris | Ouvert du mardi au samedi.</p>
+        <p><a href="index.html">Retour au Portfolio du Développeur</a></p>
+    </footer>
+
+</body>
+</html>
