@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Éclat - Institut de Beauté & Soins</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* CSS pour l'Institut de Beauté */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8f8; /* Très léger rose/blanc */
+            color: #4a4a4a;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #c99696; /* Rose poudré foncé */
+        }
+        
+        /* 1. ENTÊTE & MENU */
+        .header-esthetique {
+            background-color: #3e3e3e; /* Gris foncé moderne */
+            color: #fff;
+            padding: 40px 0;
+            border-bottom: 5px solid #e0b4b4; /* Ligne d'accent rose */
+        }
+        .header-esthetique h1 {
+            color: #fff;
+            margin: 0 0 10px 0;
+            font-size: 3em;
+        }
+        .header-esthetique p {
+            font-size: 1.2em;
+        }
+        
+        /* Menu de navigation */
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #e0b4b4;
+        }
+
+        /* BOUTON D'ACTION PRINCIPAL */
+        .btn-reserve {
+            display: inline-block;
+            background: #e0b4b4; /* Rose poudré */
+            color: #3e3e3e;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 30px 0;
+            font-weight: 700;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .btn-reserve:hover {
+            background: #c99696;
+            transform: scale(1.05);
+        }
+
+        /* 2. SERVICES */
+        #services {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .service-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .service-item {
+            background: #fcf8f8;
+            padding: 20px;
+            border: 1px solid #e0b4b4;
+            border-radius: 8px;
+            width: calc(33% - 40px);
+            min-width: 280px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s;
+        }
+        .service-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        /* 3. TARIFS */
+        #tarifs {
+            padding: 60px 0;
+            background: #f4f4f9;
+        }
+        .tarif-liste {
+            max-width: 600px;
+            margin: 40px auto 0 auto;
+            text-align: left;
+        }
+        .tarif-item-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #cccccc;
+        }
+        .tarif-item-row:last-child {
+            border-bottom: none;
+        }
+        .tarif-price {
+            font-weight: 700;
+            color: #c99696;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #3e3e3e;
+            color: #fff;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #e0b4b4;
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .service-item {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-esthetique">
+        <div class="container">
+            <h1>L'Éclat</h1>
+            <p>Votre pause bien-être au cœur de la ville.</p>
+            
+            <nav>
+                <a href="#services">NOS SOINS</a>
+                <a href="#tarifs">TARIFS</a>
+                <a href="#contact-esthetique">CONTACT & ACCÈS</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="services" class="container">
+        <h2>Nos Soins Sur Mesure</h2>
+        <a href="#" class="btn-reserve">RÉSERVER MAINTENANT (Simulation)</a>
+        
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>Soins du Visage</h3>
+                <p>Nettoyage en profondeur, masques hydratants et anti-âge personnalisés.</p>
+            </div>
+            <div class="service-item">
+                <h3>Épilations</h3>
+                <p>Épilation durable à la cire chaude traditionnelle pour une peau douce.</p>
+            </div>
+            <div class="service-item">
+                <h3>Manucure & Pédicure</h3>
+                <p>Pose de vernis semi-permanent, soins des ongles et gommages relaxants.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarifs" class="container">
+        <h2>Tarifs Clés</h2>
+        
+        <div class="tarif-liste">
+            <div class="tarif-item-row">
+                <span>Soin du Visage Signature (60 min)</span>
+                <span class="tarif-price">65 €</span>
+            </div>
+            <div class="tarif-item-row">
+                <span>Massage Relaxant Dos (30 min)</span>
+                <span class="tarif-price">40 €</span>
+            </div>
+            <div class="tarif-item-row">
+                <span>Pose de Vernis Semi-permanent</span>
+                <span class="tarif-price">30 €</span>
+            </div>
+            <div class="tarif-item-row">
+                <span>Épilation Jambes Complètes</span>
+                <span class="tarif-price">35 €</span>
+            </div>
+        </div>
+        
+        <a href="#" class="btn-reserve">VOIR TOUS LES TARIFS ET RÉSERVER</a>
+    </section>
+    
+    <section id="contact-esthetique" class="container">
+        <h2>Contact & Accès</h2>
+        <p>15 Rue de la Douceur, 75008 Paris.</p>
+        <p>Ouvert du mardi au samedi, de 10h00 à 19h00.</p>
+        <p>Téléphone : 01 XX XX XX XX (Numéro fictif)</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>L'Éclat &copy; 2025. Un site démo créé par <a href="index.html">Enzo D.</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
